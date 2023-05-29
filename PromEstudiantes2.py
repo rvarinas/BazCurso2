@@ -16,19 +16,19 @@ def calcular_promedio_notas(estudiantes):
     promedio = suma_notas/total_estudiantes
     return promedio
 
-
-def imprimir_result(messages_rep,messages_aprob):
     messages_rep = "Reprobado"
     messages_aprob = "Aprobado"
+def imprimir_result(messages_rep,messages_aprob):
+
 
     if not [estudiantes.value()]:
         return None
     if estudiantes.value('+= 50'):
+        print('valores',estudiantes,estudiantes.value())
         return messages_rep
-    print('valores',estudiantes,estudiantes.value())
     if estudiantes.value('+= 60'):
+        print('valores',estudiantes, estudiantes.value())
         return messages_aprob
-    print('valores',estudiantes, estudiantes.value())
 class TestPromedio(unittest.TestCase):
     def testPromEstudiantes(self):
         estudiantes = {
